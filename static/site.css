@@ -15,6 +15,7 @@
     --bg-color0: #fff;
     --bg-color1: White;
     --bg-color2: WhiteSmoke;
+    --bg-low: #e3e3e3;
     --bg-seek: rgba(255,255,255,0.8);
     --game-hover: #d1e6fa;
     --green-hover: #89b25b;
@@ -42,6 +43,9 @@
     --button-new-game-hover: linear-gradient(to bottom, #fafafa 0%, #f2f2f2 100%);
     --button-text: #787878;
     --button-text-hover: #787878;
+    --secondary: #629924;
+    --secondary-dim: #7daa49;
+    --secondary-dimmer: #a1c27c;
     --scrollbar-thumb: #dbdbdb;
     --scrollbar-thumb-hover: #b3b3b3;
     --input-border: #ccc;
@@ -64,6 +68,7 @@
     --bg-color0: #262421;
     --bg-color1: #2e2a24;
     --bg-color2: #333333;
+    --bg-low: #3c3934;
     --bg-seek: #2e2a24;
     --game-hover: #223344;
     --green-hover: #537c23;
@@ -1751,7 +1756,18 @@ minigame .name {
 }
 
 input[type="checkbox"] {
+    -webkit-appearance: none;
+    border-radius: 3px;
     vertical-align: middle;
+    background: var(--bg-body);
+    border: 1px solid var(--bg-low);
+    display: inline-block;
+    padding: .5em;
+}
+
+input[type="checkbox"]:checked {
+    background: var(--secondary-dimmer);
+    border-color: var(--secondary-dim);
 }
 
 input#fen {
